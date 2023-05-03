@@ -1,10 +1,11 @@
+from header import ACCESS_TOKEN
+
 import requests
 
 
-ACCESS_TOKEN = "BQD6bmuQX7R6zQcCHtDRYT7S9hczmBz9T4kM2thcIcOwRCadrEF7Lr-67TqLVZq2U7m0kAPDIYocCipPd9ZoNfDntDe5fbkCXvtGlVTCKkw5z5Gxt-Tx"
-
 artist_url = "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg"
-headers = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
+
+HEADERS = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
 
 
 def get_artists(url, headers):
@@ -14,4 +15,4 @@ def get_artists(url, headers):
     return response.content
 
 
-print(get_artists(artist_url, headers))
+print(get_artists(artist_url, HEADERS))
